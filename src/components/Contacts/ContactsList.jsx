@@ -6,6 +6,7 @@ import { Item } from './ContactsList.styled';
 
 export const ContactsList = () => {
   const contacts = useSelector(selectContacts);
+  console.log(contacts)
   const filter = useSelector(selectFilter);
   const dispatch = useDispatch();
 
@@ -18,13 +19,14 @@ export const ContactsList = () => {
   };
 
   const filteredContacts = getFilteredContacts();
+  // console.log(filteredContacts)
 
   return (
     <ul>
       {filteredContacts.map(item => {
         return (
           <Item key={item.id}>
-            {item.name}: {item.phone}
+            {item.name}: {item.number}
             <button
               onClick={() => {
                 dispatch(deleteContact(item.id));
