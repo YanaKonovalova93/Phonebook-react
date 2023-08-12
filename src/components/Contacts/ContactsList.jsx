@@ -6,20 +6,19 @@ import { Item } from './ContactsList.styled';
 
 export const ContactsList = () => {
   const contacts = useSelector(selectContacts);
-  console.log(contacts)
   const filter = useSelector(selectFilter);
   const dispatch = useDispatch();
 
   const getFilteredContacts = () => {
     if (contacts) {
-      return contacts.filter(({ name }) =>
-        name.toLowerCase().includes(filter.toLowerCase())
+      return contacts.filter((contact) =>
+        contact.name.toLowerCase().includes(filter.toLowerCase())
       );
     }
   };
 
   const filteredContacts = getFilteredContacts();
-  // console.log(filteredContacts)
+
 
   return (
     <ul>
