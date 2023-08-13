@@ -3,14 +3,67 @@ import { Toaster } from 'react-hot-toast';
 import { AppBar } from './AppBar/AppBar';
 import { Suspense } from 'react';
 
+import * as React from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import Link from '@mui/material/Link';
+
+
+
+function Copyright() {
+  return (
+    <Typography variant="body2" color="text.secondary" align="center">
+      {'Iana Konovalova'}{' '}
+      <Link color="inherit" href="https://www.linkedin.com/in/iana-konovalova/">
+      Linkedin
+      </Link>{' '}
+      <Link color="inherit" href="https://github.com/YanaKonovalova93/">
+      GitHub
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
+
 export const Layout = () => {
   return (
-    <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 16px' }}>
+    <Box sx={{
+      bgcolor: 'background.paper',
+      mr:'auto', 
+      ml:'auto',
+      pr:15,
+      pl:15,
+    }} >
+<CssBaseline />
       <AppBar />
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>
+      
       <Toaster position="top-right" reverseOrder={false} />
-    </div>
+    <Box
+          component="footer"
+          sx={{
+            py: 1,
+            px: 1,
+            mt: 'auto',
+            backgroundColor: (theme) =>
+              theme.palette.mode === 'light'
+                ? theme.palette.grey[200]
+                : theme.palette.grey[800],
+          }}
+        >
+          <Container maxWidth="sm">
+            <Copyright />
+          </Container>
+        </Box>
+    </Box>
+     
+    
   );
 };
+
+
