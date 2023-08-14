@@ -15,12 +15,12 @@ export default function Home() {
         color: '#fff',
         mb: 4,
         mt: 4,
-        height: 440,
+        height: 640,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
         backgroundImage:
-          'linear-gradient(rgba(46, 47, 66, 0.5),rgba(46, 47, 66, 0.5)),url(https://img.freepik.com/premium-photo/group-diverse-friends-taking-selfie-beach_53876-91925.jpg?w=2000)',
+          'linear-gradient(rgba(46, 47, 66, 0.4),rgba(46, 47, 66, 0.4)),url(https://www.looper.com/img/gallery/how-friends-changed-tv-and-no-one-noticed/intro-1601054311.jpg)',
       }}
     >
       {
@@ -51,11 +51,11 @@ export default function Home() {
           >
             <Typography
               component="h1"
-              variant="h3"
+              variant="h4"
               color="inherit"
               gutterBottom
             >
-              Сreate your contact book
+              Create your own contact book
             </Typography>
             <Typography variant="h5" color="inherit" paragraph>
               Stay connected with friends using our contact book!
