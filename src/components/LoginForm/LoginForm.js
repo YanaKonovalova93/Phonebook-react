@@ -75,7 +75,7 @@ export const LoginForm = () => {
           <Grid container>
             <Grid item>
               <Link
-                href="http://localhost:3000/goit-react-hw-08-phonebook/register"
+                href="http://localhost:3000/Phonebook-react/register"
                 variant="body2"
               >
                 {"Don't have an account? Sign Up"}

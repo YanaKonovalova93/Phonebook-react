@@ -89,7 +89,7 @@ export const RegisterForm = () => {
           <Grid container justifyContent="flex-end">
             <Grid item>
               <Link
-                href="http://localhost:3000/goit-react-hw-08-phonebook/login"
+                href="http://localhost:3000/Phonebook-react/login"
                 variant="body2"
               >
                 Already have an account? Sign in
